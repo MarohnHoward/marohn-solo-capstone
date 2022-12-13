@@ -25,6 +25,10 @@ export class Mars extends BasePage {
 
     async tabs() {
         let myTabs = await this.driver.getAllWindowHandles()
+        /* random expect example sorry
+        let results = await this.getText(this.legacyBtn)
+        expect(results).toContain("Legacy")
+        */
         await this.driver.switchTo().window(myTabs[1]);
         await this.driver.sleep(1000);
         await this.driver.close()
